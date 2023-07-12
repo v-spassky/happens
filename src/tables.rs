@@ -1,6 +1,8 @@
-use phf::{phf_map};
+use phf::phf_map;
 
 pub static ENG_TO_RU: phf::Map<&'static str, &'static str> = phf_map! {
+    "`" => "ё",
+    "~" => "Ё",
     "q" => "й",
     "Q" => "Й",
     "w" => "ц",
@@ -71,7 +73,9 @@ pub static ENG_TO_RU: phf::Map<&'static str, &'static str> = phf_map! {
     "?" => ",",
 };
 
-pub static RU_TO_ENG : phf::Map<&'static str, &'static str> = phf_map! {
+pub static RU_TO_ENG: phf::Map<&'static str, &'static str> = phf_map! {
+    "ё" => "`",
+    "Ё" => "~",
     "й" => "q",
     "Й" => "Q",
     "ц" => "w",
